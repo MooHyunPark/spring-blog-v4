@@ -1,12 +1,9 @@
-package com.example.blog._core.util.aop;
+package com.example.blog._core.aop;
 
-import com.example.blog._core.util.error.ex.Exception400;
-import org.aspectj.lang.JoinPoint;
+import com.example.blog._core.error.ex.Exception400;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 

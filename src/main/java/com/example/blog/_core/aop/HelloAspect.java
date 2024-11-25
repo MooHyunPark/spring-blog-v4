@@ -1,4 +1,4 @@
-package com.example.blog._core.util.aop;
+package com.example.blog._core.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;

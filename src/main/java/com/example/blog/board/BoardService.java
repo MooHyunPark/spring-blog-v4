@@ -1,6 +1,6 @@
 package com.example.blog.board;
 
-import com.example.blog._core.util.error.ex.Exception404;
+import com.example.blog._core.error.ex.Exception404;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,18 +27,11 @@ public class BoardService {
         return dtos;
     }
 
-    public BoardResponse.DetailDTO 게시글상세보기(int id) {
+    public BoardResponse.DetailDTO 게시글조회하기(int id) {
         Board board = boardRepository.findById(id)
                 .orElseThrow(() -> new Exception404("해당 id의 게시글이 없습니다 : " + id));
 
         return new BoardResponse.DetailDTO(board);
-    }
-
-    public BoardResponse.UpdateFormDTO 게시글수정화면보기(int id) {
-        Board board = boardRepository.findById(id)
-                .orElseThrow(() -> new Exception404("해당 id의 게시글이 없습니다 : " + id));
-
-        return new BoardResponse.UpdateFormDTO(board);
     }
 
     @Transactional
